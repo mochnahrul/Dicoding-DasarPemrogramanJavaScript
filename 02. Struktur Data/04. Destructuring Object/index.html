@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur Data - Destructuring Object</title>
+  </head>
+  <body>
+    <script>
+      // Destructuring Object
+      const profile1 = {
+        firstName1: "John",
+        lastName1: "Doe",
+        age1: 18,
+      };
+
+      const { firstName1, lastName1, age1 } = profile1;
+      console.log(firstName1, lastName1, age1);
+
+      // Destructuring Assignment
+      const profile2 = {
+        firstName2: "John",
+        lastName2: "Doe",
+        age2: 18,
+      };
+
+      let firstName2 = "Dimas";
+      let age2 = 20;
+
+      ({ firstName2, age2 } = profile2);
+
+      console.log(firstName2);
+      console.log(age2);
+
+      // Default Values
+      const profile3 = {
+        firstName3: "John",
+        lastName3: "Doe",
+        age3: 18,
+      };
+
+      const { firstName3, age3, isMale3 } = profile3;
+
+      console.log(firstName3);
+      console.log(age3);
+      console.log(isMale3);
+
+      // Assigning to Different Local Variable Names
+      const profile4 = {
+        firstName4: "John",
+        lastName4: "Doe",
+        age4: 18,
+      };
+
+      const { firstName4: localFirstName4, lastName4: localLastName4, age4: localAge4 } = profile4;
+
+      console.log(localFirstName4);
+      console.log(localLastName4);
+      console.log(localAge4);
+    </script>
+  </body>
+</html>

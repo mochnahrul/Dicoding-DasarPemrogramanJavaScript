@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functional Programming - Paradigma FP</title>
+  </head>
+  <body>
+    <script>
+      // Gaya penulisan kode imperatif
+      // const names = ['Harry', 'Ron', 'Jeff', 'Thomas'];
+      // const newNamesWithExcMark = [];
+
+      // for (let i = 0; i < names.length; i++) {
+      //   newNamesWithExcMark.push(`${names[i]}!`);
+      // }
+
+      // console.log(newNamesWithExcMark);
+
+      // Gaya penulisan kode deklaratif
+      const names = ["Harry", "Ron", "Jeff", "Thomas"];
+      const newNamesWithExcMark = names.map((name) => `${name}!`);
+      console.log(newNamesWithExcMark);
+    </script>
+  </body>
+</html>

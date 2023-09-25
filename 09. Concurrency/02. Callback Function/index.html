@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concurrency - Callback Function</title>
+  </head>
+  <body>
+    <script>
+      // Callback Function
+      const orderCoffee = (callback) => {
+        let coffee = null;
+        console.log("Sedang membuat kopi, silakan tunggu...");
+        setTimeout(() => {
+          coffee = "Kopi sudah jadi!";
+          callback(coffee);
+        }, 3000);
+      };
+
+      orderCoffee((coffee) => {
+        console.log(coffee);
+      });
+    </script>
+  </body>
+</html>

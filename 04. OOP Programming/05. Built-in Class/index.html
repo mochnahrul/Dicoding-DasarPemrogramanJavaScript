@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP Programming - Built-in Class</title>
+  </head>
+  <body>
+    <script>
+      // Menghitung umur dengan memanfaatkan object date
+
+      // Parameter birthday dapat berupa miliseconds ataupun date string
+      const myAge = (birthday) => {
+        const birtday = new Date(birthday);
+        const today = Date.now(); // Today menghasilkan nilai miliseconds saat ini
+
+        const diff_ms = today - birtday.getTime(); // Menghitung selisih nilai miliseconds hari ini dan tanggal lahir
+        const diffDate = new Date(diff_ms);
+
+        return diffDate.getFullYear() - 1970; // 1970 adalah representasi 0 dari miliseconds
+      };
+
+      console.log(myAge("1999-04-30")); // 21 tahun
+
+      // Menggunakan built-in class javascript yang lainnya
+      const listOfContent = [1, 2, "President", {}];
+      console.log(Array.isArray(listOfContent));
+
+      const splitText = "12:20:00".split(":");
+      console.log(splitText);
+    </script>
+  </body>
+</html>

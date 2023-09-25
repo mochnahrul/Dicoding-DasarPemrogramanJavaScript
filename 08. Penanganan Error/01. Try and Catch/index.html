@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penanganan Error - Try and Catch</title>
+  </head>
+  <body>
+    <script>
+      // Try and Catch
+      // try {
+      //   console.log("Awal blok try");   // (1)
+      //   errorCode;                      // (2)
+      //   console.log("Akhir blok try");  // (3)
+      // } catch (error) {
+      //   console.log("Terjadi error!");  // (4)
+      // }
+
+      // Try Catch Finally
+      try {
+        console.log("Awal blok try");
+        console.log("Akhir blok try");
+      } catch (error) {
+        console.log("Baris ini diabaikan");
+      } finally {
+        console.log("Akan tetap dieksekusi");
+      }
+    </script>
+  </body>
+</html>

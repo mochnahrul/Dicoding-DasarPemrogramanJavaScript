@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP Programming - Overriding Method</title>
+  </head>
+  <body>
+    <script>
+      // Overriding Constructor
+      // class Mail {
+      //   constructor(author) {
+      //     this.from = author;
+      //     this._contacts = [];
+      //   };
+
+      //   sendMessage(msg, to) {
+      //     console.log(`you send: ${msg} to ${to} from ${this.from}`);
+      //     this._contacts.push(to);
+      //   };
+
+      //   showAllContacts() {
+      //     return this._contacts;
+      //   };
+      // };
+
+      // class WhatsApp extends Mail {
+      //   constructor(username, isBussinessAccount, phone) {
+      //     super(phone);
+      //     this.username = 'dicoding';
+      //     this.isBussinessAccount = true;
+      //   };
+
+      //   myProfile() {
+      //     return `my name ${this.username}, is ${this.isBussinessAccount ? 'Business' : 'Personal'}`;
+      //   };
+      // };
+
+      // const wa1 = new WhatsApp("dicoding", true, "080111000222");
+      // console.log(wa1.myProfile());
+
+      // Overriding Method
+      class Mail {
+        constructor(author) {
+          this.from = author;
+          this._contacts = [];
+        }
+
+        sendMessage(msg, to) {
+          console.log(`you send: ${msg} to ${to} from ${this.from}`);
+          this._contacts.push(to);
+        }
+
+        showAllContacts() {
+          return this._contacts;
+        }
+      }
+
+      class WhatsApp extends Mail {
+        constructor(username, isBussinessAccount, phone) {
+          super(phone);
+          this.username = "dicoding";
+          this.isBussinessAccount = true;
+        }
+
+        sendMessage(msg, to) {
+          super.sendMessage(msg, to);
+          console.log("Send by WA");
+        }
+      }
+
+      const wa1 = new WhatsApp("di", true, "089000999888");
+      wa1.sendMessage("halo", "089000999888");
+    </script>
+  </body>
+</html>

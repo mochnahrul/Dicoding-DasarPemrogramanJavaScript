@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP Programming - Property dan Method</title>
+  </head>
+  <body>
+    <script>
+      class Mail {
+        constructor() {
+          this.from = "pengirim@dicoding.com";
+          this.contacts = [];
+          this.yourOtherProperty = "the values";
+        }
+
+        sendMessage(msg, to) {
+          console.log(`you send: ${msg} to ${to} from ${this.from}`);
+          this.contacts.push(to); // menyimpan kontak baru
+        }
+      }
+
+      const mail = new Mail();
+      mail.sendMessage("Hello", "nahrulalarcon@gmail.com");
+    </script>
+  </body>
+</html>

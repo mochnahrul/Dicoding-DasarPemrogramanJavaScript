@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur Data - Destructuring Array</title>
+  </head>
+  <body>
+    <script>
+      // Destructuring Array
+      const favorites1 = ["Seafood", "Salad", "Nugget", "Soup"];
+      const [firstFood1, secondFood1, thirdFood1, fourthFood1] = favorites1;
+      console.log(firstFood1);
+      console.log(secondFood1);
+      console.log(thirdFood1);
+      console.log(fourthFood1);
+
+      const favorites2 = ["Seafood", "Salad", "Nugget", "Soup"];
+      const [, , thirdFood2] = favorites2;
+      console.log(thirdFood2);
+
+      // Destructuring Assignment
+      const favorites3 = ["Seafood", "Salad", "Nugget", "Soup"];
+      let myFood3 = "Ice Cream";
+      let herFood3 = "Noodles";
+
+      [myFood3, herFood3] = favorites3;
+
+      console.log(myFood3);
+      console.log(herFood3);
+
+      // Dengan array destructuring assignment, bisa menukar nilai variable dengan mudah tanpa membuat variable tambahan
+      let a = 1;
+      let b = 2;
+
+      console.log("Sebelum swap");
+      console.log("Nilai a: " + a);
+      console.log("Nilai b: " + b);
+
+      [a, b] = [b, a];
+
+      console.log("Setelah swap");
+      console.log("Nilai a: " + a);
+      console.log("Nilai b: " + b);
+
+      // Default Values
+      const favorites4 = ["Seafood"];
+      const [myFood4, herFood4] = favorites4;
+      console.log(myFood4);
+      console.log(herFood4);
+    </script>
+  </body>
+</html>

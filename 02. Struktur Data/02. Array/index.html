@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur Data - Array</title>
+  </head>
+  <body>
+    <script>
+      // Array
+      const myArray1 = ["Cokelat", 42.5, 22, true, "Programming"];
+      console.log(myArray1);
+      console.log(myArray1[1]);
+
+      // Mengeluarkan data elemen terakhir pada array dan menambahkannya
+      const myArray2 = ["Orange", 42.5, 22, true, "Programming"];
+      myArray2.pop();
+      myArray2.push("JavaScript");
+      console.log(myArray2);
+
+      // Mengeluarkan data elemen pertama pada array dan menambahkannya
+      const myArray3 = ["Cokelat", 42.5, 22, true, "Programming"];
+      myArray3.shift();
+      myArray3.unshift("Apple");
+      console.log(myArray3);
+
+      // Menghapus data dari array
+      const myArray4 = ["Cokelat", 42.5, 22, true, "Programming"];
+      delete myArray4[1];
+      console.log(myArray4);
+      myArray4.splice(1, 1);
+      console.log(myArray4);
+    </script>
+  </body>
+</html>

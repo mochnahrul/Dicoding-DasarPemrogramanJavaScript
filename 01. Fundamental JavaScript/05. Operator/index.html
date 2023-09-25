@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamental JavaScript - Operator</title>
+  </head>
+  <body>
+    <script>
+      // Assignment Operator
+      let a = 10;
+      let b = 5;
+      a += b;
+      console.log(a);
+
+      // Comparison Operator
+      let c = 10;
+      let d = 12;
+      console.log(c < d);
+      console.log(c > d);
+
+      const aString = "10";
+      const aNumber = 10;
+      console.log(aString == aNumber); // true, karena nilainya sama-sama 10
+      console.log(aString === aNumber); // false, karena walaupun nilainya sama, tetapi tipe datanya berbeda
+
+      // Logical Operator
+      let e = 10;
+      let f = 12;
+
+      /* AND Operator */
+      console.log(e < 15 && f > 10); // (true && true) -> true
+      console.log(e > 15 && f > 10); // (false && true) -> false
+
+      /* OR Operator */
+      console.log(e < 15 || f > 10); // (true || true) -> true
+      console.log(e > 15 || f > 10); // (false || true) -> true
+
+      /* NOT Operator */
+      console.log(!(e < 15)); // !(true) -> false
+      console.log(!(e < 15 && f > 10)); // !(true && true) -> !(true) -> false
+    </script>
+  </body>
+</html>

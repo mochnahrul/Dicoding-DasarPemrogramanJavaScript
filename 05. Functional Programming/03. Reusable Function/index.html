@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functional Programming - Reusable Function</title>
+  </head>
+  <body>
+    <script>
+      // Array Map
+      const newArray = ["Harry", "Ron", "Jeff", "Thomas"].map((name) => {
+        return `${name}!`;
+      });
+      console.log(newArray);
+
+      // Array Filter
+      const truthyArray = [1, "", "Hallo", 0, null, "Harry", 14].filter((item) => Boolean(item));
+      console.log(truthyArray);
+
+      // Array Reduce
+      const students1 = [
+        {
+          name: "Harry",
+          score: 60,
+        },
+        {
+          name: "James",
+          score: 88,
+        },
+        {
+          name: "Ron",
+          score: 90,
+        },
+        {
+          name: "Bethy",
+          score: 75,
+        },
+      ];
+
+      const totalScore = students1.reduce((acc, student) => acc + student.score, 0);
+      console.log(totalScore);
+
+      // Array Some
+      const array = [1, 2, 3, 4, 5];
+      const even = array.some((element) => element % 2 === 0);
+      console.log(even);
+
+      // Array Find
+      const students2 = [
+        {
+          name: "Harry",
+          score: 60,
+        },
+        {
+          name: "James",
+          score: 88,
+        },
+        {
+          name: "Ron",
+          score: 90,
+        },
+        {
+          name: "Bethy",
+          score: 75,
+        },
+      ];
+
+      const findJames = students2.find((student) => student.name === "James");
+      console.log(findJames);
+
+      // Array Sort
+      const array1 = [1, 30, 4, 1000];
+      const compareNumber = (a, b) => {
+        return a - b;
+      };
+
+      const sorting = array1.sort(compareNumber);
+      console.log(sorting);
+
+      // Array Every
+      const scores = [70, 85, 90];
+      const minimumScore = 65;
+      const examPassed = scores.every((score) => score >= minimumScore);
+      console.log(examPassed);
+
+      // Array ForEach
+
+      // Cara Imperatif
+      // const names = ['Harry', 'Ron', 'Jeff', 'Thomas'];
+      // for(let i = 0; i < names.length; i++) {
+      //   console.log(`Hello, ${names[i]}!`);
+      // }
+
+      // Cara Deklaratif
+      const names = ["Harry", "Ron", "Jeff", "Thomas"];
+      names.forEach((name) => {
+        console.log(`Hello, ${name}!`);
+      });
+    </script>
+  </body>
+</html>
